@@ -11,6 +11,8 @@ app.use(express.json({ extended: false }));
 
 connectDB();
 
+app.get("/", (req, res) => res.json({ msg: "welcome to hospital finder API" }));
+
 app.use("/api/v1/user", userRoute);
 app.use("/api/v1/hospital", hospitalRoute);
 
